@@ -1,7 +1,6 @@
 package com.example.its.web.user;
 
 import com.example.its.domain.auth.UserService;
-import java.util.Collections;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
