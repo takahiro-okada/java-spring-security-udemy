@@ -15,6 +15,7 @@ public interface UserRepository {
   @Select("SELECT * FROM users")
   List<User> findAll();
 
-  @Insert("INSERT INTO users (username, password, authority) VALUES (#{username}, #{password},'USER')")
-  void insert(String username,String password);
+  @Insert("INSERT INTO users (username, password, authority) VALUES (#{username}, #{password}," +
+      "#{authority})")
+  void insert(String username,String password, String authority);
 }
