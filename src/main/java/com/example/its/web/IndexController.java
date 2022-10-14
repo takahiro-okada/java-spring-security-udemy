@@ -12,7 +12,12 @@ public class IndexController {
     }
 
     @GetMapping("/login")
-    public String showSLoginForm(){
+    public String showLoginForm(){
         return "login";
+    }
+
+    @GetMapping("/logout")
+    public String showLogoutForm(){
+        return "logout";
     }
 }
