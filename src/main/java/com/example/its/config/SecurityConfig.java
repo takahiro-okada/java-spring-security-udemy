@@ -26,6 +26,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .headers().frameOptions().disable();
     http
         .authorizeRequests()
+        .mvcMatchers("users/**").hasAuthority("ADMIN")
         .mvcMatchers("/login/**").permitAll()
         .anyRequest().authenticated()
         .and()
